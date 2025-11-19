@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apps</title>
+<style>
+  body { 
+    font-family: sans-serif; 
+    text-align: center; 
+    padding: 50px; 
+    background-color: #f9f9f9; 
+  }
+
+  h1 { 
+    font-size: 32px; 
+    margin-bottom: 30px; 
+  }
+
+  /* Boutons cachés au départ */
+  #app-buttons { 
+    display: none; 
+    margin-top: 30px; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 15px;
+  }
+
+  button { 
+    padding: 15px; 
+    margin: 10px; 
+    font-size: 14px; 
+    cursor: pointer; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #fff; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100px;
+    transition: transform 0.2s;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  button img { 
+    width: 40px; 
+    height: 40px; 
+    margin-bottom: 8px; 
+  }
+
+  #login input { 
+    padding: 10px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+  }
+
+  #login button { 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    margin-left: 10px;
+  }
+
+  #error { 
+    color: red; 
+    margin-top: 10px; 
+  }
+</style>
+</head>
+<body>
+
+<h1>Apps</h1>
+
+<!-- Champ mot de passe -->
+<div id="login">
+  <p>Entrez le mot de passe pour accéder aux apps :</p>
+  <input type="password" id="password" placeholder="Mot de passe">
+  <button onclick="checkPassword()">Entrer</button>
+  <p id="error"></p>
+</div>
+
+<!-- Boutons des apps -->
+<div id="app-buttons">
+  <button onclick="window.location.href='whatsapp.html'">
+    <img src="icons/whatsapp.png" alt="WhatsApp">
+    WhatsApp
+  </button>
+  <button onclick="window.location.href='youtube.html'">
+    <img src="icons/youtube.png" alt="YouTube">
+    YouTube
+  </button>
+  <button onclick="window.location.href='instagram.html'">
+    <img src="icons/instagram.png" alt="Instagram">
+    Instagram
+  </button>
+  <button onclick="window.location.href='clashroyale.html'">
+    <img src="icons/clashroyale.png" alt="Clash Royale">
+    Clash Royale
+  </button>
+  <button onclick="window.location.href='tiktok.html'">
+    <img src="icons/tiktok.png" alt="TikTok">
+    TikTok
+  </button>
+  <button onclick="window.location.href='brawlstars.html'">
+    <img src="icons/brawlstars.png" alt="Brawl Stars">
+    Brawl Stars
+  </button>
+  <button onclick="window.location.href='pinterest.html'">
+    <img src="icons/pinterest.png" alt="Pinterest">
+    Pinterest
+  </button>
+  <button onclick="window.location.href='chess.html'">
+    <img src="icons/chess.png" alt="Chess">
+    Chess
+  </button>
+  <button onclick="window.location.href='fcmobile.html'">
+    <img src="icons/fcmobile.png" alt="FC Mobile">
+    FC Mobile
+  </button>
+  <button onclick="window.location.href='chatgpt.html'">
+    <img src="icons/chatgpt.png" alt="ChatGPT">
+    ChatGPT
+  </button>
+  <button onclick="window.location.href='spotify.html'">
+    <img src="icons/spotify.png" alt="Spotify">
+    Spotify
+  </button>
+  <button onclick="window.location.href='vinted.html'">
+    <img src="icons/vinted.png" alt="Vinted">
+    Vinted
+  </button>
+  <button onclick="window.location.href='reddit.html'">
+    <img src="icons/reddit.png" alt="Reddit">
+    Reddit
+  </button>
+  <button onclick="window.location.href='clashofclans.html'">
+    <img src="icons/clashofclans.png" alt="Clash of Clans">
+    Clash of Clans
+  </button>
+ <button onclick="window.location.href='snapchat.html'">
+    <img src="icons/snapchat.png" alt="snapchat">
+    snapchat
+ </button>
+ <button onclick="window.location.href='dropbox.html'">
+    <img src="icons/dropbox.png" alt="dropbox">
+    dropbox
+</div>
+
+<script>
+  function checkPassword() {
+    const pass = document.getElementById('password').value;
+    const error = document.getElementById('error');
+
+    if (pass === 'hlimilakheb') { 
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('app-buttons').style.display = 'flex';
+    } else {
+      error.textContent = 'Mot de passe incorrect';
+    }
+  }
+</script>
+
+</body>
+</html>
+  
+  
